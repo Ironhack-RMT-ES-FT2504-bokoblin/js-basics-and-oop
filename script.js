@@ -200,3 +200,31 @@ console.log( hero3.turnEvil() )
 
 console.log(hero3.isEvil)
 
+
+
+// SUBCLASSES
+
+class SuperHero extends Hero {
+
+  constructor(name, secretIdentity, superPower) {
+    super(name, secretIdentity)
+    // propiedades de superheroes
+    this.superPower = superPower
+  }
+
+
+  // metodos unicos de superheroes
+  useSuperPower() {
+    return `${this.name} utiliza el poder de ${this.superPower}`
+  }
+
+}
+
+let superHero1 = new SuperHero("Spiderman", "Peter Parker", "lanzar telarañas")
+console.log(superHero1)
+console.log(superHero1.useSuperPower())
+console.log(superHero1.revealSecretIdentity())
+
+let superHero2 = new SuperHero("Wolverine", "Logan", "atacar con las garras")
+console.log(superHero2)
+console.log(superHero2.useSuperPower())
